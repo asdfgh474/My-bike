@@ -20,7 +20,11 @@
 * {
      box-sizing: border-box;
  }
- 
+
+    html {
+    scroll-behavior: smooth;
+    }
+    
  html,
  body {
      margin: 0;
@@ -472,7 +476,6 @@
             transition: 0.3s;
             margin-top: 15px;
             margin-bottom: 10px;
-            position:absolute;
             }
 
 .cta-button:hover{transform: scale(1.05);
@@ -491,7 +494,7 @@
             transition: 0.3s;
             margin-top: 15px;
             margin-bottom: 10px;
-            position:absolute;}
+            }
 
             .cta-secondary:hover{transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
