@@ -455,19 +455,26 @@ nav a:hover::after {
 /* =========================
    PRODUCTS
 ========================= */
-.subject{grid-column: 1/-1;
+.subject{
+
+         justify-items: start;
+
+         transform:translateY(200px);
+
+         padding-left: 10px;
 
           margin-top: 10px;
           margin-bottom: 0.1px;
-          margin-right: 1050px;
+          
+          text-align: left;
 
           color: white;
-          -webkit-text-stroke: 2px black;
+          -webkit-text-stroke: 0.5px black;
 
           letter-spacing: 1px;
         
           font-size: 50px;
-          font-weight: 900;
+          font-weight: 700;
 
           cursor: default;
 
@@ -485,19 +492,25 @@ nav a:hover::after {
     grid-template-columns:
         repeat(auto-fill, minmax(300px, 1fr));
 
+        grid-template-rows:200px, 300px ;
+
+        grid-auto-flow: row;
+
     column-gap: 10px;
 
     row-gap: 10px;
+
+    place-items: center;
 
     margin-top: 100px;
     margin-bottom: 50px;
 
     border: 3px solid red;
     
-    padding-top: 1px;
+    padding-top: 100px;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1px;
+    padding-right: 1px;
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -1321,8 +1334,9 @@ footer h1 {
         <!-- =========================
              PRODUCTS
         ========================= -->
+        <h4 class="subject"> best bikes</h4>
 
-        <div class="mahsool"> <h4 class="subject">best bikes</h4>
+        <div class="mahsool"> 
 
             <!-- PRODUCT 1 -->
 
