@@ -26,8 +26,6 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 html,
@@ -35,8 +33,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -121,7 +117,6 @@ h1 {
 
 .asli h1::after {
     content: "";
-
     display: block;
 
     width: 0;
@@ -233,15 +228,6 @@ nav a:hover::after {
 .bike:hover,
 .contact-us:hover {
     transform: scale(1.03);
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-main {
-    width: 100%;
 }
 
 
@@ -383,7 +369,47 @@ main {
    CTA BUTTONS
 ========================= */
 
-.cta-button,
+.cta-button {
+    display: inline-block;
+
+    padding: 2px 45px;
+
+    background: linear-gradient(
+        rgb(255, 251, 0),
+        rgb(102, 255, 0)
+    );
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 3px solid black;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(
+        rgb(255, 102, 102),
+        rgb(255, 179, 179)
+    );
+}
+
+.cta-button:active {
+    transform: scale(0.97);
+}
+
 .cta-secondary {
     display: inline-block;
 
@@ -410,7 +436,6 @@ main {
     position: relative;
 }
 
-.cta-button:hover,
 .cta-secondary:hover {
     transform: scale(1.05);
 
@@ -422,56 +447,47 @@ main {
     );
 }
 
-.cta-button:active,
 .cta-secondary:active {
     transform: scale(0.97);
 }
 
 
 /* =========================
-   PRODUCTS TITLE
-========================= */
-
-.subject {
-
-    transform: translateY(165px);
-
-    padding-left: 10px;
-
-    border-radius: 20px;
-
-    background-color: rgb(210, 45, 45);
-
-    color: white;
-
-    -webkit-text-stroke: 2px black;
-
-    letter-spacing: 1px;
-
-    font-size: 32px;
-    font-weight: 900;
-
-    cursor: default;
-
-    white-space: nowrap;
-
-    text-shadow: none;
-
-    width: calc(90% - 50px);
-
-    position: relative;
-
-    left: 0;
-}
-
-
-/* =========================
    PRODUCTS
 ========================= */
+.subject{
+         
+         position: relative;
+         top: 192px;
+         left: 15px;
+
+          background-color: rgb(165, 51, 51);
+          color: white;
+          -webkit-text-stroke: 1px black;
+
+          border-radius: 20px;
+
+          letter-spacing: 1px;
+
+          box-sizing: content-box;
+          width: fit-content;
+
+          padding-left: 8px;
+          padding-right: 8px;
+          padding-top: 0%;
+          padding-bottom: 0%;
+        
+          font-size: 50px;
+          font-weight: 900;
+
+          cursor: default;
+
+          white-space: nowrap;
+        }
 
 .mahsool {
     width: 100%;
-    max-width: 100%;
+    max-width: none;
 
     margin: 20px 0;
 
@@ -480,33 +496,27 @@ main {
     grid-template-columns:
         repeat(auto-fill, minmax(300px, 1fr));
 
-    grid-template-rows:
-        200px 300px;
+        grid-template-rows:200px, 300px ;
 
-    grid-auto-flow: row;
+        grid-auto-flow: row;
 
-    column-gap: 1px;
+    column-gap: 10px;
 
-    row-gap: 20px;
+    row-gap: 10px;
 
     place-items: center;
 
     margin-top: 100px;
     margin-bottom: 50px;
 
-    border: 3px solid black;
-
-    padding-top: 70px;
+    border: 3px solid red;
+    
+    padding-top: 100px;
     padding-bottom: 20px;
     padding-left: 1px;
     padding-right: 1px;
 
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
     background-color: rgb(255, 38, 38);
-
-    overflow: hidden;
 }
 
 
@@ -518,9 +528,6 @@ main {
     position: relative;
 
     width: 320px;
-    max-width: 100%;
-
-    margin-right: 1px;
 
     padding: 20px;
 
@@ -531,13 +538,11 @@ main {
     border-radius: 6px;
 
     box-shadow:
-        20px 14px 18px gray;
+        0 4px 12px rgba(0, 0, 0, 0.15);
 
     text-align: center;
 
     transition: 0.3s ease;
-
-    min-width: 0;
 }
 
 .product:hover {
@@ -547,7 +552,6 @@ main {
 .product h3 {
     display: none;
 }
-
 
 /* =========================
    PRODUCT SUBJECT
@@ -572,8 +576,6 @@ main {
     position: relative;
 
     width: 220px;
-    max-width: 100%;
-
     height: 220px;
 
     display: flex;
@@ -585,14 +587,11 @@ main {
     background-color: #f5f5f5;
 
     border: 3px solid black;
-
     border-radius: 12px;
 
     overflow: hidden;
 
-    margin: auto;
-
-    transform: none;
+    transform: translateX(30px);
 }
 
 .product-img img {
@@ -602,8 +601,6 @@ main {
     object-fit: cover;
 
     transition: 0.3s ease;
-
-    max-width: 100%;
 }
 
 .product-img img:hover {
@@ -649,8 +646,6 @@ main {
     align-items: center;
 
     gap: 8px;
-
-    max-width: 100%;
 }
 
 .product-info h2 {
@@ -680,25 +675,19 @@ main {
     display: inline-block;
 
     width: 150px;
-    max-width: 100%;
 
     padding: 15px;
 
-    background: linear-gradient(
-        blue,
-        rgb(201, 201, 255)
-    );
+    background:linear-gradient(blue, rgb(201, 201, 255));
 
     color: rgb(0, 0, 0);
 
     text-decoration: none;
 
     border: 5px solid black;
-
     border-radius: 20px;
 
     font-weight: 900;
-
     font-size: 35px;
 
     transition: 0.3s ease;
@@ -728,8 +717,6 @@ main {
     font-size: 25px;
 
     font-weight: 900;
-
-    max-width: 100%;
 }
 
 .jadval th {
@@ -769,14 +756,11 @@ main {
     align-items: center;
 
     gap: 8px;
-
-    max-width: 100%;
 }
 
 input,
 textarea {
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 input[type="text"] {
@@ -856,7 +840,6 @@ fieldset {
     display: block;
 
     width: fit-content;
-    max-width: 100%;
 
     border-radius: 10px;
 }
@@ -871,8 +854,6 @@ select {
     border-radius: 5px;
 
     border: 3px solid black;
-
-    max-width: 100%;
 }
 
 input[type="checkbox"] {
@@ -935,17 +916,12 @@ footer h1 {
         grid-template-columns: 1fr;
 
         row-gap: 30px;
-
-        width: 100%;
-        max-width: 100%;
     }
 
     .product {
         width: 100%;
 
         max-width: 320px;
-
-        min-width: 0;
     }
 
     .hero h1 {
@@ -962,8 +938,6 @@ footer h1 {
         padding: 12px 8px;
 
         flex-wrap: wrap;
-
-        max-width: 100%;
     }
 
     nav a {
@@ -974,9 +948,6 @@ footer h1 {
 
     .hero {
         min-height: 60vh;
-
-        width: 100%;
-        max-width: 100%;
     }
 
     .first {
@@ -995,10 +966,18 @@ footer h1 {
         max-width: 80%;
     }
 
+    .product {
+        width: 90%;
 
-    /* MOBILE PRODUCT SCROLL */
+        max-width: none;
 
-    .mahsool {
+        flex: 0 0 300px;
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mahsool{
         display: flex;
 
         flex-wrap: nowrap;
@@ -1010,38 +989,6 @@ footer h1 {
 
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .product {
-        flex: 0 0 300px;
-
-        width: 300px;
-
-        max-width: none;
-
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-
-    .product-img {
-        width: 220px;
-        max-width: 100%;
-
-        height: 220px;
-
-        transform: none;
-    }
-
-    .jadval {
-        font-size: 18px;
-
-        max-width: 100%;
-    }
-
-    .jadval th,
-    .jadval td {
-        padding: 8px 12px;
     }
 
     .first::after {
@@ -1111,16 +1058,8 @@ footer h1 {
         font-size: 25px;
     }
 
-    .subject {
-        transform: translateY(165px);
-
-        width: calc(90% - 30px);
-
-        max-width: calc(100% - 30px);
-
-        font-size: 30px;
-
-        -webkit-text-stroke: 1px black;
+    .subject{
+        transform: translateX();
     }
 }
 
@@ -1196,13 +1135,6 @@ footer h1 {
 
 
 <!-- =========================
-     MAIN
-========================= -->
-
-<main>
-
-
-<!-- =========================
      HERO
 ========================= -->
 
@@ -1228,534 +1160,546 @@ footer h1 {
     </p>
 
 
-    <h2>
-        my favorite bike
-    </h2>
+    <main>
 
+        <h2>
+            my favorite bike
+        </h2>
 
-    <p>
-        one of my favorite bike is the bmx bikes
-        becouse you can do lots of tricks
-        with this kind of bikes
-    </p>
-
-
-    <h2>
-        and you can buy this kind of bike in this site:
-
-        <a href="https://iran-docharkh.ir">
-            (iran-docharkh)
-        </a>
-    </h2>
-
-
-    <h1 class="second-title">
-        my bike shop
-    </h1>
-
-
-    <div class="pr">
 
         <p>
-
-            you can look at the bikes in this site
-            <br>
-
-            and choose anyone you want and then you can
-            massege to this ID at telegram
-
-            <br>
-
-
-            <a
-                href="https://t.me/Pouya_567"
-                class="hero-btn">
-
-                Pouya_567
-
-            </a>
-
-            <br>
-
-
-            <a
-                href="#bike"
-                class="cta-button">
-
-                watch bikes
-
-            </a>
-
-            <br>
-
-
-            <a
-                href="https://t.me/Pouya_567"
-                class="cta-secondary">
-
-                contact us
-
-            </a>
-
-            <br>
-
-            and dorder anyone you want
-
+            one of my favorite bike is the bmx bikes
+            becouse you can do lots of tricks
+            with this kind of bikes
         </p>
 
-    </div>
 
-</section>
+        <h2>
+            and you can buy this kind of bike in this site:
 
-
-<br>
-<br>
-
-
-<!-- =========================
-     BIKE OPTIONS
-========================= -->
-
-<select name="bike-brand">
-
-    <option>bonito bike</option>
-
-    <option>mountain bike</option>
-
-    <option>electro bike</option>
-
-    <option>jordan bike</option>
-
-</select>
+            <a href="https://iran-docharkh.ir">
+                (iran-docharkh)
+            </a>
+        </h2>
 
 
-<select name="bike-size">
-
-    <option>27.5</option>
-
-    <option>29</option>
-
-    <option>26</option>
-
-</select>
+        <h1 class="second-title">
+            my bike shop
+        </h1>
 
 
-<br>
+        <div class="pr">
+
+            <p>
+
+                you can look at the bikes in this site
+                <br>
+
+                and choose anyone you want and then you can
+                massege to this ID at telegram
+
+                <br>
 
 
-<input
-    type="checkbox"
-    id="helmet"
-    name="accessories"
-    value="bike-helmet">
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="hero-btn">
 
-<label
-    class="check-label"
-    for="helmet">
+                    Pouya_567
 
-    bike-helmet
+                </a>
 
-</label>
+                <br>
 
 
-<input
-    type="checkbox"
-    id="lock"
-    name="accessories"
-    value="bike-lock">
+                <a
+                    href="#bike"
+                    class="cta-button">
 
-<label
-    class="check-label"
-    for="lock">
+                    watch bikes
 
-    bike-lock
+                </a>
 
-</label>
+                <br>
 
 
-<input
-    type="checkbox"
-    id="bike-light"
-    name="accessories"
-    value="bike-light">
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="cta-secondary">
 
-<label
-    class="check-label"
-    for="bike-light">
+                    contact us
 
-    bike-light
+                </a>
 
-</label>
+                <br>
+
+                and dorder anyone you want
+
+            </p>
+
+        </div>
+
+    </section>
 
 
-<!-- =========================
-     CUSTOMER INFORMATION
-========================= -->
-
-<section id="bike">
-
-    <fieldset>
-
-        <legend>
-            customer information
-        </legend>
-
-        <label for="customer-information">
-            customer information:
-        </label>
-
-        <select
-            id="customer-information"
-            name="customer-information">
-
-            <option value="name">
-                name
-            </option>
-
-            <option value="your-massage">
-                your massage
-            </option>
-
-        </select>
-
-    </fieldset>
+    <br>
+    <br>
 
 
     <!-- =========================
-         PRODUCTS
+         BIKE OPTIONS
     ========================= -->
 
-    <h4 class="subject">
-        best mountain bikes
-    </h4>
+    <select name="bike-brand">
+
+        <option>bonito bike</option>
+
+        <option>mountain bike</option>
+
+        <option>electro bike</option>
+
+        <option>jordan bike</option>
+
+    </select>
 
 
-    <div class="mahsool">
+    <select name="bike-size">
 
-                        <!-- PRODUCT 1 -->
+        <option>27.5</option>
 
-<div class="product">
+        <option>29</option>
 
-    <h3>bike 1</h3>
+        <option>26</option>
 
-    <div class="product-subject">
-        <h2>electronic bike</h2>
-    </div>
+    </select>
 
-    <div class="product-img">
-
-        <img
-            src="BIke.jpg"
-            alt="electro bike">
-
-        <span class="new">
-            NEW
-        </span>
-
-    </div>
-
-    <div class="product-info">
-
-        <table class="jadval">
-
-            <tr>
-                <th>size</th>
-                <th>gear</th>
-            </tr>
-
-            <tr>
-                <td>27.5</td>
-                <td>27</td>
-            </tr>
-
-        </table>
-
-    </div>
 
     <br>
 
-    <a
-        href="https://t.me/Pouya_567"
-        class="product-btn">
 
-        order
+    <input
+        type="checkbox"
+        id="helmet"
+        name="accessories"
+        value="bike-helmet">
 
-    </a>
+    <label
+        class="check-label"
+        for="helmet">
 
-    <div class="product-massage">
+        bike-helmet
 
-        <form>
+    </label>
 
-            <label for="name1">
-                your name:
+
+    <input
+        type="checkbox"
+        id="lock"
+        name="accessories"
+        value="bike-lock">
+
+    <label
+        class="check-label"
+        for="lock">
+
+        bike-lock
+
+    </label>
+
+
+    <input
+        type="checkbox"
+        id="bike-light"
+        name="accessories"
+        value="bike-light">
+
+    <label
+        class="check-label"
+        for="bike-light">
+
+        bike-light
+
+    </label>
+
+
+    <!-- =========================
+         CUSTOMER INFORMATION
+    ========================= -->
+
+    <section id="bike">
+
+        <fieldset>
+
+            <legend>
+                customer information
+            </legend>
+
+            <label for="customer-information">
+                customer information:
             </label>
 
-            <input
-                type="text"
-                id="name1"
-                name="name"
-                placeholder="your name"
-                required>
+            <select
+                id="customer-information"
+                name="customer-information">
 
-            <textarea
-                name="massage"
-                rows="5"
-                placeholder="your-masssage"></textarea>
+                <option value="name">
+                    name
+                </option>
 
-            <input
-                type="submit"
-                value="send">
+                <option value="your-massage">
+                    your massage
+                </option>
 
-        </form>
+            </select>
 
-    </div>
+        </fieldset>
 
-</div>
 
+        <!-- =========================
+             PRODUCTS
+        ========================= -->
+        <h4 class="subject"> best mountain bikes</h4>
 
-<!-- PRODUCT 2 -->
+        <div class="mahsool"> 
 
-<div class="product">
+            <!-- PRODUCT 1 -->
 
-    <h3>bike 2</h3>
+            <div class="product">
 
-    <div class="product-subject">
-        <h2>mountain bike</h2>
-    </div>
+                <h3>bike 1</h3>
 
-    <div class="product-img">
 
-        <img
-            src="mountain.webp"
-            alt="mountain bike">
+                <div class="product-subject">
 
-    </div>
+                    <h2>
+                        electronic bike
+                    </h2>
 
-    <div class="product-info">
+                </div>
 
-        <table class="jadval">
 
-            <tr>
-                <th>size</th>
-                <th>gear</th>
-            </tr>
+                <div class="product-img">
 
-            <tr>
-                <td>27.5</td>
-                <td>27</td>
-            </tr>
+                    <img
+                        src="BIke.jpg"
+                        alt="electro bike">
 
-        </table>
+                    <span class="new">
+                        NEW
+                    </span>
 
-    </div>
+                </div>
 
-    <br>
 
-    <a
-        href="https://t.me/Pouya_567"
-        class="product-btn">
+                <div class="product-info">
 
-        order
+                    <table class="jadval">
 
-    </a>
+                        <tr>
 
-    <div class="product-massage">
+                            <th>
+                                size
+                            </th>
 
-        <form>
+                            <th>
+                                gear
+                            </th>
 
-            <label for="name2">
-                your name:
-            </label>
+                        </tr>
 
-            <input
-                type="text"
-                id="name2"
-                name="name"
-                placeholder="your name"
-                required>
 
-            <textarea
-                name="massage"
-                rows="5"
-                placeholder="your-masssage"></textarea>
+                        <tr>
 
-            <input
-                type="submit"
-                value="send">
+                            <td>
+                                27.5
+                            </td>
 
-        </form>
+                            <td>
+                                27
+                            </td>
 
-    </div>
+                        </tr>
 
-</div>
+                    </table>
 
+                </div>
 
-<!-- PRODUCT 3 -->
 
-<div class="product">
+                <br>
 
-    <h3>bike 3</h3>
 
-    <div class="product-subject">
-        <h2>bonito bike</h2>
-    </div>
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="product-btn">
 
-    <div class="product-img">
+                    order
 
-        <img
-            src="bonito.png"
-            alt="bonito bike">
+                </a>
 
-    </div>
 
-    <div class="product-info">
+                <div class="product-massage">
 
-        <table class="jadval">
-
-            <tr>
-                <th>size</th>
-                <th>gear</th>
-            </tr>
-
-            <tr>
-                <td>29</td>
-                <td>21</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-    <br>
-
-    <a
-        href="https://t.me/Pouya_567"
-        class="product-btn">
-
-        order
-
-    </a>
-
-    <div class="product-massage">
-
-        <form>
-
-            <label for="name3">
-                your name:
-            </label>
-
-            <input
-                type="text"
-                id="name3"
-                name="name"
-                placeholder="your name"
-                required>
-
-            <textarea
-                name="massage"
-                rows="5"
-                placeholder="your-masssage"></textarea>
-
-            <input
-                type="submit"
-                value="send">
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product">
-
-    <h3>bike 4</h3>
-
-    <div class="product-subject">
-        <h2>jordan bike</h2>
-    </div>
-
-    <div class="product-img">
-
-        <img
-            src="delta.webp"
-            alt="mountain bike">
-
-    </div>
-
-    <div class="product-info">
-
-        <table class="jadval">
-
-            <tr>
-                <th>size</th>
-                <th>gear</th>
-            </tr>
-
-            <tr>
-                <td>29</td>
-                <td>21</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-    <br>
-
-    <a
-        href="https://t.me/Pouya_567"
-        class="product-btn">
-
-        order
-
-    </a>
-
-    <div class="product-massage">
-
-        <form>
-
-            <label for="name4">
-                your name:
-            </label>
-
-            <input
-                type="text"
-                id="name4"
-                name="name"
-                placeholder="your name"
-                required>
-
-            <textarea
-                name="massage"
-                rows="5"
-                placeholder="your-masssage"></textarea>
-
-            <input
-                type="submit"
-                value="send">
-
-        </form>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <h1>
-        our goal is to gift you the joy of cycling
-    </h1>
-
-</footer>
+                    <form>
+
+                        <label for="name1">
+                            your name:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name1"
+                            name="name"
+                            placeholder="your name"
+                            required>
+
+
+                        <textarea name="massage"rows="5"placeholder="your-masssage"></textarea>
+
+
+                        <input
+                            type="submit"
+                            value="send">
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product">
+                <h3>bike 2</h3>
+
+                <div class="product-subject">
+                    <h2>mountain bike</h2>
+                </div>
+            
+                <div class="product-img">
+            
+                    <img
+                        src="mountain.webp"
+                        alt="mountain bike">
+            
+                </div>
+            
+                <div class="product-info">
+            
+                    <table class="jadval">
+            
+                        <tr>
+                            <th>size</th>
+                            <th>gear</th>
+                        </tr>
+            
+                        <tr>
+                            <td>27.5</td>
+                            <td>27</td>
+                        </tr>
+            
+                    </table>
+            
+                </div>
+            
+                <br>
+            
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="product-btn">
+            
+                    order
+            
+                </a>
+            
+                <div class="product-massage">
+            
+                    <form>
+            
+                        <label for="name2">
+                            your name:
+                        </label>
+            
+                        <input
+                            type="text"
+                            id="name2"
+                            name="name"
+                            placeholder="your name"
+                            required>
+            
+                        <textarea name="massage"rows="5"placeholder="your-masssage"></textarea>
+            
+                        <input
+                            type="submit"
+                            value="send">
+            
+                    </form>
+            
+                </div>
+            
+            </div>
+            
+            
+            <!-- PRODUCT 3 -->
+            
+            <div class="product">
+            
+                <h3>bike 3</h3>
+            
+                <div class="product-subject">
+                    <h2>bonito bike</h2>
+                </div>
+            
+                <div class="product-img">
+            
+                    <img
+                        src="bonito.png"
+                        alt="bonito bike">
+            
+                </div>
+            
+                <div class="product-info">
+            
+                    <table class="jadval">
+            
+                        <tr>
+                            <th>size</th>
+                            <th>gear</th>
+                        </tr>
+            
+                        <tr>
+                            <td>29</td>
+                            <td>21</td>
+                        </tr>
+            
+                    </table>
+            
+                </div>
+            
+                <br>
+            
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="product-btn">
+            
+                    order
+            
+                </a>
+            
+                <div class="product-massage">
+            
+                    <form>
+            
+                        <label for="name3">
+                            your name:
+                        </label>
+            
+                        <input
+                            type="text"
+                            id="name3"
+                            name="name"
+                            placeholder="your name"
+                            required>
+            
+                        <textarea name="massage"rows="5"placeholder="your-masssage"></textarea>
+            
+                        <input
+                            type="submit"
+                            value="send">
+            
+                    </form>
+            
+                </div>
+            
+            </div>
+            
+            
+            <!-- PRODUCT 4 -->
+            
+            <div class="product">
+            
+                <h3>bike 4</h3>
+            
+                <div class="product-subject">
+                    <h2>jordan bike</h2>
+                </div>
+            
+                <div class="product-img">
+            
+                    <img
+                        src="delta.webp"
+                        alt="mountain bike">
+            
+                </div>
+            
+                <div class="product-info">
+            
+                    <table class="jadval">
+            
+                        <tr>
+                            <th>size</th>
+                            <th>gear</th>
+                        </tr>
+            
+                        <tr>
+                            <td>29</td>
+                            <td>21</td>
+                        </tr>
+            
+                    </table>
+            
+                </div>
+            
+                <br>
+            
+                <a
+                    href="https://t.me/Pouya_567"
+                    class="product-btn">
+            
+                    order
+            
+                </a>
+            
+                <div class="product-massage">
+            
+                    <form>
+            
+                        <label for="name4">
+                            your name:
+                        </label>
+            
+                        <input
+                            type="text"
+                            id="name4"
+                            name="name"
+                            placeholder="your name"
+                            required>
+            
+                        <textarea name="massage"rows="5"placeholder="your-masssage"></textarea>
+            
+                        <input
+                            type="submit"
+                            value="send">
+            
+                    </form>
+            
+                </div>
+            
+            </div>
+            
+            
+            </div>
+            
+            </section>
+            
+            
+            </main>
+            
+            
+            <!-- FOOTER -->
+            
+            <footer>
+            
+                <h1>
+                    our goal is to gift you the joy of cycling
+            
