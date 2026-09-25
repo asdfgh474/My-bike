@@ -444,7 +444,7 @@ nav a:hover::after {
 .subject{
          
          position: absolute;
-         bottom: 34.2%;
+         bottom: 34.5%;
          left: 15px;
          z-index: 1000;
 
@@ -480,20 +480,11 @@ nav a:hover::after {
 
     margin: 20px 0;
 
-    display: grid;
+    display: flex;
+    gap: 5px;
 
-    grid-template-columns:
-        repeat(auto-fill, minmax(300px, 1fr));
-
-        grid-template-rows:200px, 300px ;
-
-        grid-auto-flow: row;
-
-    column-gap: 10px;
-
-    row-gap: 10px;
-
-    place-items: center;
+    overflow-y: hidden;
+    overflow-x: auto;
 
     margin-top: 100px;
     margin-bottom: 50px;
@@ -506,9 +497,9 @@ nav a:hover::after {
     padding-right: 1px;
 
     background-color: rgb(255, 38, 38);
+
+    scroll-behavior: smooth;
 }
-
-
 /* =========================
    PRODUCT CARD
 ========================= */
@@ -522,16 +513,13 @@ nav a:hover::after {
 
     background-color: white;
 
-    border: 2px solid black;
-
-    border-radius: 6px;
-
-    box-shadow:
-        0 4px 12px gray;
+    border: 1px solid black;
 
     text-align: center;
 
     transition: 0.3s ease;
+
+    flex: 0 0 320px;
 }
 
 .product:hover {
@@ -543,7 +531,20 @@ nav a:hover::after {
 }
 
 
+.product:nth-child(1){
+    margin-left: 30px;
 
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+}
+
+.product:nth-child(4){
+    margin-right: 30px;
+
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
 /* =========================
    NEW
 ========================= */
