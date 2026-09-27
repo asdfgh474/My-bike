@@ -444,7 +444,7 @@ nav a:hover::after {
 .subject{
          
          position: absolute;
-         bottom: 40.5%;
+         bottom: 40.1%;
          left: 15px;
          z-index: 1000;
 
@@ -551,7 +551,7 @@ nav a:hover::after {
 
 .new {
     position: absolute;
-    bottom: 782px;
+    bottom: 46.6rem;
     right: 15px;
 
     padding: 3px 8px;
@@ -1191,6 +1191,11 @@ footer{
         left:8px;
 
         background-color: rgb(165, 51, 51);
+    }
+
+    .product-massage label{
+        position: absolute;
+        bottom: 10rem;
     }
 }
 
