@@ -444,7 +444,7 @@ nav a:hover::after {
 .subject{
          
          position: absolute;
-         bottom: 40.1%;
+         bottom: 41.6%;
          left: 15px;
          z-index: 1000;
 
@@ -801,7 +801,7 @@ input[type="text"]:focus {
 
     transform: scale(0.95);
 
-    box-shadow: 0 0 15px rgb(49, 49, 49);
+    box-shadow: 0 0 25px rgb(37, 37, 37);
     outline: none;
 
     border: 3px solid black;
@@ -840,7 +840,7 @@ input[type="submit"]:active {
     font-size: 1.4rem;
 
     position: absolute;
-    bottom: 9.7rem;
+    bottom: 9.6rem;
     left: 2.9rem;
 
     color: black;
@@ -935,12 +935,12 @@ input[type="checkbox"]:checked {
     cursor: default;
 }
 
-footer::after {
+footer ::after {
     content: "";
 
     display: block;
 
-    width: 600px;
+    width: 810px;
 
     max-width: 90%;
 
@@ -949,8 +949,10 @@ footer::after {
     margin: auto;
 
     background-color: white;
+}
 
-    transform: translateY(-15px);
+footer h2::after{
+    width: 0;
 }
 
 footer h1 {
@@ -961,12 +963,22 @@ footer h1 {
     font-weight: bold;
 
     color: white;
+
+    font-size: 45px;
+}
+
+footer h2{
+    color: white;
+    font-weight: 700;
+    font-size:40px;
+    text-align: center;
 }
 
 footer{
     background-color: black;
 
     padding-top: 10px;
+    padding-bottom: 5px;
 
     position: relative;
     top: 10%;
@@ -996,7 +1008,7 @@ footer{
     }
     .subject{
     position:absolute;
-        bottom:950px;
+        bottom:46.1%;
         left:8px;
     }
 
@@ -1087,7 +1099,7 @@ footer{
 
       .new{
            position: absolute;
-           bottom: 770px;
+           bottom: 46.6rem;
            right: 5px;
       }
 
@@ -1196,6 +1208,28 @@ footer{
     .product-massage label{
         position: absolute;
         bottom: 10rem;
+    }
+
+    .akharr{
+        -webkit-text-stroke: 1px black;
+    }
+
+    .akhar{
+        font-size: 2rem;
+        flex-wrap: nowrap;
+    }
+
+    .footer h1{
+        font-size:25px;
+        flex-wrap: nowrap;
+    }
+
+    .footer ::after{
+        width:600px;
+    }
+
+    .footer h2{
+        font-size:20px;
     }
 }
 
