@@ -940,7 +940,7 @@ input[type="checkbox"]:checked {
 
     display: block;
 
-    width: 810px;
+    width: 840px;
 
     max-width: 100%;
 
@@ -1111,7 +1111,7 @@ footer{
 
       .new{
            position: absolute;
-           bottom: 46.6rem;
+           bottom: 47.6rem;
            right: 5px;
       }
 
@@ -1211,7 +1211,7 @@ footer{
         border-radius:15px;
 
         position:absolute;
-        bottom:48.1%;
+        bottom:47.1%;
         left:8px;
 
         background-color: rgb(165, 51, 51);
@@ -1232,8 +1232,7 @@ footer{
     }
 
     .no{
-        font-size:5px;
-        white-space: nowrap;
+        font-size:2px;
     }
 
     .no::after{
@@ -1241,8 +1240,7 @@ footer{
     }
 
     .yes{
-        font-size:8px;
-        white-space: nowrap;
+        font-size:4px;
     }
 }
 
