@@ -951,6 +951,22 @@ footer h1::after {
     background-color: white;
 }
 
+footer h2::after{
+    content:"";
+     
+    display: block;
+
+    width: 1px;
+
+    max-width: 100%;
+
+    height: 5px;
+
+    margin: auto;
+
+    background-color: black;
+}
+
 footer h1 {
     text-align: center;
 
@@ -1195,7 +1211,7 @@ footer{
         border-radius:15px;
 
         position:absolute;
-        bottom:46.1%;
+        bottom:48.1%;
         left:8px;
 
         background-color: rgb(165, 51, 51);
@@ -1203,7 +1219,7 @@ footer{
 
     .product-massage label{
         position: absolute;
-        bottom: 10.5rem;
+        bottom: 10.3rem;
     }
 
     .akharr{
@@ -1216,7 +1232,7 @@ footer{
     }
 
     .footer h1{
-        font-size:auto;
+        font-size:5px;
         white-space: nowrap;
     }
 
@@ -1225,7 +1241,7 @@ footer{
     }
 
     .footer h2{
-        font-size:auto;
+        font-size:8px;
         white-space: nowrap;
     }
 }
