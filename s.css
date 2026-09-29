@@ -1232,7 +1232,7 @@ footer{
     }
 
     .no{
-        font-size:2px;
+        font-size:1.5rem;
     }
 
     .no::after{
@@ -1240,7 +1240,7 @@ footer{
     }
 
     .yes{
-        font-size:4px;
+        font-size:2rem;
     }
 }
 
