@@ -761,6 +761,7 @@ input[type="text"] {
 
     height: 38px;
     font-size: 20px;
+    font-weight: 600;
 
     transition: 0.5s ease;
 
@@ -884,6 +885,7 @@ input[type="submit"]:active {
     border: 1px solid black;
     border-radius: 20px;
     appearance: none;
+    transform: translateY(1px);
 }
 
 .remember input:checked{
@@ -1280,6 +1282,14 @@ footer{
 
     .yes{
         font-size:2rem;
+    }
+
+    .remember{
+        position: absolute;
+        top: 48.85;
+    }
+    .remember input{
+        transform: translateY(2px);
     }
 }
 
