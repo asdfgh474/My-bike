@@ -875,7 +875,6 @@ input[type="submit"]:active {
     cursor:default;
     position: absolute;
     left: 6rem;
-    top: 48.75rem;
 }
 
 .remember input{
@@ -885,7 +884,13 @@ input[type="submit"]:active {
     border: 1px solid black;
     border-radius: 20px;
     appearance: none;
-    transform: translateY(1px);
+    position: absolute;
+    top:48.75rem;
+}
+
+.remember label{
+   position: absolute;
+   top:48.75rem;
 }
 
 .remember input:checked{
@@ -1284,12 +1289,13 @@ footer{
         font-size:2rem;
     }
 
-    .remember{
-        position: absolute;
-        top: 48.85;
-    }
     .remember input{
-        transform: translateY(2px);
+        position: absolute;
+        top: 50rem;
+    }
+    .remember label{
+        position: absolute;
+        top:50rem;
     }
 }
 
