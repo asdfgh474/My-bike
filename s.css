@@ -1291,11 +1291,11 @@ footer{
 
     .remember input{
         position: absolute;
-        top: 50rem;
+        bottom: 2px;
     }
     .remember label{
         position: absolute;
-        top:50rem;
+        top:48.5rem;
     }
 }
 
