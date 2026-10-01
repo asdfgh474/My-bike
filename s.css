@@ -1171,8 +1171,6 @@ footer{
 
         background-color: rgb(255, 38, 38);
 
-        max-height:52rem;
-
     }
 
     .first::after {
@@ -1293,7 +1291,7 @@ footer{
 
     .remember input{
         position: absolute;
-        bottom: 2px;
+        bottom: 48.5;
     }
     .remember label{
         position: absolute;
