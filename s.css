@@ -1288,14 +1288,9 @@ footer{
     .yes{
         font-size:2rem;
     }
-
-    .remember input{
+    .remember {
         position: absolute;
-        bottom: 48.5;
-    }
-    .remember label{
-        position: absolute;
-        top:48.5rem;
+        top:47.5rem;
     }
 }
 
