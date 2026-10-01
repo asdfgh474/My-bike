@@ -1171,6 +1171,8 @@ footer{
 
         background-color: rgb(255, 38, 38);
 
+        height:52rem;
+
     }
 
     .first::after {
