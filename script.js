@@ -127,6 +127,7 @@ function rendercart() {
         const item=document.createElement("li");
 
         const name=document.createElement("span");
+        name.classList.add("name");
         
         const quantity=document.createElement("span");
         quantity.classList.add("cart-quantity");
@@ -196,3 +197,4 @@ allBikes.forEach(function(product) {
 console.log(totalprice);
 
 
+                    
