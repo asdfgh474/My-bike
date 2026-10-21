@@ -1,1 +1,198 @@
+const searchinput = document.getElementById("search");
+const searchbutton = document.getElementById("search-btn");
+const allBikes = document.querySelectorAll(".product");
+const noResults=document.getElementById("no-result");
+const subject=document.getElementById("mas");
+const Mahsool=document.getElementById("hgf");
+const Section=document.getElementById("bike");
+const detailsName=document.getElementById("details-name");
+const bikeDetails=document.getElementById("bike-details");
+const detailsInfo=document.getElementById("details-info");
+const closeDetails=document.getElementById("close-details");
+const cartbutton=document.querySelectorAll(".add-to-cart");
+const cartcountElement=document.getElementById("cart-count");
+const cartitems=document.getElementById("cart-items");
+const producT=document.querySelector(".product");
+const price=document.querySelector(".price");
+const carttotalElement=document.getElementById("cart-total");
+const carttotalcontainer=carttotalElement.parentElement;
+
+allBikes.forEach(function(tBike) {
+    tBike.addEventListener("click",function(event) {
+
+        if (event.target.closest("a,button,input,label,select,textarea")) {return;}
+        const bikeName=tBike.querySelector("h2,h3,h4");
+
+        closeDetails.addEventListener("click", function() {
+            bikeDetails.hidden=true;
+        });
+
+        detailsName.textContent=bikeName ?bikeName.textContent
+        :"pouya davoodi";
+
+        detailsInfo.textContent=tBike.textContent.replace(bikeName.textContent,"").trim();
+
+        bikeDetails.hidden=false;
+
+    });
+});
+
+searchinput.addEventListener("input", function() {
+    const searchtext = searchinput.value.toLowerCase().trim();
+
+    let hasResults=false;
+
+    allBikes.forEach(function(tBike) {
+        const biketext = tBike.textContent.toLowerCase();
+
+        if (searchtext === "" || biketext.includes(searchtext)) {
+            tBike.style.display = "";
+            hasResults=true;
+        } else {
+            tBike.style.display = "none";
+        }
+    });
+    noResults.hidden=hasResults;
+    subject.hidden=!hasResults;
+    Mahsool.hidden=!hasResults;
+});
+
+document.addEventListener("keydown", function(event) {
+    if(event.key==="Escape") {
+        bikeDetails.hidden=true;
+    }
+});
+
+cartbutton.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const product=button.closest(".product");
+        const productName=product.querySelector("h2").textContent;
+
+        const productprice=Number(product.querySelector(".price").textContent.
+        replaceAll(",", "").trim() );
+
+        console.log(productName,productprice);
+
+
+        const title=product.querySelector("h2");
+
+        const existingproduct= cart.find(function(item) {
+            return item.name===productName;
+        });
+
+        if(existingproduct) {
+            existingproduct.quantity=(existingproduct.quantity || 1) +1;
+        }  
+        
+        else{ cart.push({name: productName, 
+                         price:productprice,
+                          quantity:1});
+                        }
+        
+        let cartlist=cartitems.querySelector("ul");
+
+        rendercart();
+
+        console.log(cart);
+        cartcount++;
+        cartcountElement.textContent=cartcount;
+
+        console.log(productName);
+    });
+});
+let cartcount= 0;
+const cart= JSON.parse(localStorage.getItem("cart")) || [];
+
+function rendercart() {
+    let cartlist=cartitems.querySelector("ul");
+
+    if (!cartlist) {
+        cartlist=document.createElement("ul");
+
+        cartitems.insertBefore(cartlist,carttotalElement.parentElement);
+    }
+
+    cartlist.replaceChildren();
+
+    let totalPrice=0;
+    cart.forEach(function(product) {
+        totalPrice=totalPrice+product.price *(product.quantity|| 1);
+    });
+    carttotalElement.textContent=totalPrice.toLocaleString("en-US");
+    carttotalcontainer.hidden=cart.length===0;
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    cart.forEach(function(productName,index) {
+        const item=document.createElement("li");
+
+        const name=document.createElement("span");
+        
+        const quantity=document.createElement("span");
+        quantity.classList.add("cart-quantity");
+
+        quantity.textContent=productName.quantity||1;
+
+        name.appendChild(quantity);
+        name.append(" "+productName.name);
+
+        const removebutton=document.createElement("button");
+        removebutton.textContent="remove";
+
+        removebutton.addEventListener("click", function() {
+            if(productName.quantity>1) {
+                productName.quantity--;
+            }  else{cart.splice(index, 1);}
+            
+            cartcount=cart.reduce(function(total,product) {
+                return total+(producT.quantity || 1); },0);
+                    cartcountElement.textContent=cartcount;
+
+                    rendercart();
+
+            });
+
+
+            
+
+            
+    
+
+        const price=document.createElement("span");
+        price.textContent= productName.price.toLocaleString("en-US") + "تومان";
+        
+        const productinfo=document.createElement("div");
+        productinfo.classList.add("cart-product-info");
+
+        const pricerow=document.createElement("div");
+        pricerow.classList.add("cart-price-row");
+
+        productinfo.appendChild(name);
+        pricerow.appendChild(price);
+        pricerow.appendChild(removebutton);
+
+        item.appendChild(productinfo);
+        item.appendChild(pricerow);
+        cartlist.appendChild(item);
+    });
+}
+
+cartcount=cart.length;
+cartcountElement.textContent=cartcount;
+rendercart();
+
+let totalprice=0;
+
+allBikes.forEach(function(product) {
+    const price=product.querySelector(".price");
+
+    if (price) {
+        const pricenumber=Number(price.textContent.replaceAll(",", "") .trim());
+
+        totalprice=totalprice+pricenumber;
+    }
+});
+
+console.log(totalprice);
+
 
