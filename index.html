@@ -21,7 +21,7 @@
 
 <body>
 
-    <h4 class="subject"> best mountain bikes</h4>
+    
 
 <!-- =========================
      HEADER
@@ -29,7 +29,7 @@
 
 <div class="asli">
 
-    <h1>دوچرخه پویا</h1>
+    <h1 id="dh">دوچرخه پویا</h1>
 
     <h4>
         the best bikes for all of people
@@ -43,6 +43,7 @@
 ========================= -->
 
 <nav class="menu">
+
 
     <div class="home">
 
@@ -185,13 +186,13 @@
 
     <br>
     <br>
-
-
+subject
     <!-- =========================
          BIKE OPTIONS
     ========================= -->
 
-    <select name="bike-brand">
+    <select name="bike-brand" id="brand-filter">
+        <option>all bikes</option>
 
         <option>bonito bike</option>
 
@@ -299,11 +300,26 @@
             <h1>viva</h1>
             <h1>trinex</h1>
         </details>
+    </section>
+
+        <div class="search">
+        <input id="search" type="text" placeholder="search the bike">
+        <button id="search-btn">search</button>
+        <p id="no-result" hidden> No Product Findout!</p>
+    </div>
+
+    <p class="sabad"> number of product carts: <span id="cart-count">0 </span> </p>
+
+    <div id="cart-items" class="cart-items"> <P> bikes brand:</P> <p class="kol" hidden>جمع کل:<span id="cart-total">0</span>تومان
+    </p> </div>
         <!-- =========================
              PRODUCTS
         ========================= -->
+        <div id="coloft">
+            <h4 class="subject" id="mas"> best mountain bikes</h4>
+        <div class="mahsool" id="hgf"> 
 
-        <div class="mahsool"> 
+            
             
             <!-- PRODUCT 1 -->
 
@@ -370,6 +386,8 @@
 
                 <br>
 
+                <p class="pr">قیمت</p>
+                <p class="price">27,500,000</p>
 
                 <a
                     href="https://t.me/Pouya_567"
@@ -379,6 +397,7 @@
 
                 </a>
 
+                <button class="add-to-cart"> add to cart</button>
 
                 <div class="product-massage">
 
@@ -417,7 +436,7 @@
                 <h3>bike 2</h3>
 
                 <div class="product-subject">
-                    <h2>mountain bike</h2>
+                    <h2 id="mtb">mountain bike</h2>
                 </div>
             
                 <div class="product-img">
@@ -449,6 +468,8 @@
             
                 <br>
             
+                <p class="pr">قیمت</p>
+                <p class="price">35,000,000</p>
                 <a
                     href="https://t.me/Pouya_567"
                     class="product-btn">
@@ -457,6 +478,8 @@
             
                 </a>
             
+                <button class="add-to-cart"> add to cart</button>
+
                 <div class="product-massage">
             
                     <form>
@@ -484,7 +507,6 @@
                 </div>
             
             </div>
-            
             
             <!-- PRODUCT 3 -->
             
@@ -525,6 +547,8 @@
             
                 <br>
             
+                <p class="pr">قیمت</p>
+                <p class="price">32,800,000</p>
                 <a
                     href="https://t.me/Pouya_567"
                     class="product-btn">
@@ -533,6 +557,8 @@
             
                 </a>
             
+                <button class="add-to-cart"> add to cart</button>
+
                 <div class="product-massage">
             
                     <form>
@@ -601,6 +627,8 @@
             
                 <br>
             
+                <p class="pr">قیمت</p>
+                <p class="price">40,000,000</p>
                 <a
                     href="https://t.me/Pouya_567"
                     class="product-btn">
@@ -609,6 +637,8 @@
             
                 </a>
             
+                <button class="add-to-cart"> add to cart</button>
+
                 <div class="product-massage">
             
                     <form>
@@ -641,16 +671,21 @@
                 </label>
     
             </div>
-
+        
             </div>
-            
-            </section>
-            
+        
+        </div>
+
+        <div id="bike-details" hidden>
+            <h2 id="details-name"></h2>
+            <P id="details-info"></P>
+            <button id="close-details">close</button>
+        </div>
 
             <h1 class="akhar">about pouya bike shop </h1>
             <h3 class="akharr">you can look and choose every bike in our shop</h3>  
             <!-- FOOTER -->
-            
+
             <footer>
             <h2 class="yes"> pouya bike shop 2026</h2>
 
