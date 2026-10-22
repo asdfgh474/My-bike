@@ -1515,7 +1515,8 @@ footer{
         top: 48.85;
     }
     .remember input{
-        transform: translateY(2px);
+        transform: translateY(10px);
+        border:2.1px solid black;
     }
     
     .search input{
