@@ -73,7 +73,6 @@ cartbutton.forEach(function(button) {
 
         console.log(productName,productprice);
 
-
         const title=product.querySelector("h2");
 
         const existingproduct= cart.find(function(item) {
@@ -100,8 +99,42 @@ cartbutton.forEach(function(button) {
         console.log(productName);
     });
 });
-let cartcount= 0;
-const cart= JSON.parse(localStorage.getItem("cart")) || [];
+let cartcount=0;
+let cart=[];
+
+function isValidProduct(product) {
+    return (
+        typeof product==="object" &&
+        product!==null &&
+        !Array.isArray(product) &&
+        typeof product.name==="string" &&
+        product.name.trim() !=="" &&
+        typeof product.price==="number" &&
+        product.price>0 &&
+        (
+            product.quantity===undefined||(
+                typeof product.quantity==="number" &&
+                Number.isInteger(product.quantity) &&
+                product.quantity>0
+            )
+            
+        )
+    );
+}
+
+try{
+    cart=JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (!Array.isArray(cart) || ! cart.every(isValidProduct)) {cart=[];
+    
+    cart.forEach(function(product) {
+        if (product.quantity===undefined){
+            product.quantity=1;
+        }
+    });}
+    } 
+    
+    catch(error) {cart=[];}
 
 function rendercart() {
     let cartlist=cartitems.querySelector("ul");
@@ -127,7 +160,6 @@ function rendercart() {
         const item=document.createElement("li");
 
         const name=document.createElement("span");
-        name.classList.add("name");
         
         const quantity=document.createElement("span");
         quantity.classList.add("cart-quantity");
@@ -193,8 +225,3 @@ allBikes.forEach(function(product) {
         totalprice=totalprice+pricenumber;
     }
 });
-
-console.log(totalprice);
-
-
-                    
