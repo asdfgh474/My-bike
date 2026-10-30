@@ -1314,7 +1314,6 @@ footer{
 
 }
 
-
 @media (max-width: 600px) {
 
     nav {
@@ -1532,7 +1531,8 @@ footer{
 
     .remember{
         position: absolute;
-        top: 48.85;
+        top: 63.2rem;
+        left: 70px;
     }
     .remember input{
         transform: translateY(10px);
@@ -1602,7 +1602,7 @@ footer{
     }
     
     .msg input{
-        bottom: 5px;
+        bottom: 1px;
     }
     
 }
