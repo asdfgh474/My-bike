@@ -775,6 +775,10 @@ nav a:hover::after {
     cursor: default;
 }
 
+.cart-quantity{
+    background-color: white;
+}
+
 .kol ::before{
     content: "";
     background-color: black;
@@ -900,6 +904,8 @@ textarea {
     resize: vertical;
 
     transition: 0.5s ease;
+
+    margin-top: 5px;
 }
 
 .msg textarea:focus{
@@ -950,7 +956,7 @@ input[type="submit"]:active {
     font-size: 1.4rem;
 
     position: absolute;
-    bottom: 9.8rem;
+    bottom: 10rem;
     left: 2.9rem;
 
     color: black;
@@ -981,7 +987,7 @@ input[type="submit"]:active {
     cursor:default;
     position: absolute;
     left: 6rem;
-    top: 63.3rem;
+    top: 63.6rem;
 }
 
 .remember input{
@@ -991,7 +997,6 @@ input[type="submit"]:active {
     border: 1px solid black;
     border-radius: 20px;
     appearance: none;
-    transform: translateY(1px);
 }
 
 .remember input:checked{
@@ -1165,7 +1170,7 @@ footer{
 
 .search button{
     position: relative;
-    top:34px;
+    top:35px;
     left: 20px;
     width: 110px;
     height: 40px;
@@ -1189,7 +1194,22 @@ footer{
     top: 30px;
     left: 20px;
     width: 500px;
+    border: 3px solid black;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 8px;
+    padding-bottom: 2px;
+    font-size: 20px;
+    transition: 0.4s ease;
 }
+
+.search input:focus{
+    transform: scale(0.97);
+    box-shadow: 0 6px 8px gray;
+    outline: none;
+}
+
+
 .cart-items
 .search p{
     position: relative;
